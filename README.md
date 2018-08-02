@@ -17,7 +17,7 @@ Here's how to do it:
 
 Voila!  Now your UILabel is sized to fit your multi-line text.
 
-Look at ViewController.m and the updateLabel method for the code.
+Look at [ViewController.m](https://github.com/ByteSlinger/UILabelSizeToFitDemo/blob/c677528fe6b148165bf828972f11f2b678954af1/UILabelSizeToFitDemo/ViewController.m#L62) and the updateLabel method for the code.
 
 Here are some screen shots, and you can see that the labels are resized to fit the longest line in each, as well as fit the height to contain all the lines:
 
