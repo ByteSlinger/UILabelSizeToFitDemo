@@ -7,13 +7,13 @@ The built-in sizeToFit method of UILabel does not set the width to fit the longe
 
 Here's how to do it:
 
-..* Find the longest text line
-..* Set numberOfLines to 1 (temporarily)
-..* Set label text to longest text line
-..* Call label.sizeToFit (sets label width for longest line)
-..* Set numberOfLines to 0 (multi-line)
-..* Set label text to full multi-line text
-..* Call label.sizeToFit (sets label height for all lines)
+* Find the longest text line
+* Set numberOfLines to 1 (temporarily)
+* Set label text to longest text line
+* Call label.sizeToFit (sets label width for longest line)
+* Set numberOfLines to 0 (multi-line)
+* Set label text to full multi-line text
+* Call label.sizeToFit (sets label height for all lines)
 
 Voila!  Now your UILabel is sized to fit your multi-line text.
 
