@@ -69,7 +69,6 @@ static NSString *INITIAL_TEXT = @"Line 1\nLine ............... 2\nLine .... 3";
         _label.textColor = UIColor.blackColor;
         [_label setBackgroundColor:[bananaColor colorWithAlphaComponent:0.9f]];
         _label.textAlignment = NSTextAlignmentLeft;
-        _label.layer.masksToBounds = YES;
         
         [self.view addSubview:_label];
     }
