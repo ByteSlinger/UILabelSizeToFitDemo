@@ -59,7 +59,46 @@ static NSString *INITIAL_TEXT = @"Line 1\nLine ............... 2\nLine .... 3";
     [self performSegueWithIdentifier:@"edit-label" sender:self];
 }
 
-- (void)updateLabel:(NSString *)notes {
+-(void)updateLabel:(NSString *)notes {
+    // close to the "sticky" notes color
+    UIColor *bananaColor = [ViewController colorWithHexString:@"#FFFC79"];
+    
+    if (_label == nil) {
+        _label = [[UILabel alloc] init];
+        _label.numberOfLines = 0;
+        _label.textColor = UIColor.blackColor;
+        _label.backgroundColor = [bananaColor colorWithAlphaComponent:0.9f];
+        _label.textAlignment = NSTextAlignmentLeft;
+        //_label.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [self.view addSubview:_label];
+    }
+    
+    // set new text
+    _label.text = notes;
+    
+    // make font size based on screen size
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat fontSize = MIN(screenWidth,screenHeight) / 12;
+    [_label setFont:[UIFont systemFontOfSize:fontSize]];
+    
+    // calculate the bounding rect, limiting the width to the width of the view
+    CGRect frame = [notes boundingRectWithSize:CGSizeMake(self.view.frame.size.width, CGFLOAT_MAX)
+                                       options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
+                                    attributes:@{NSFontAttributeName: _label.font}
+                                       context:nil];
+
+    // set frame and then use sizeToFit
+    [_label setFrame:frame];
+    [_label sizeToFit];
+    
+    // center the label in my view
+    CGPoint center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    [_label setCenter:center];
+}
+
+- (void)updateLabel1:(NSString *)notes {
     // close to the "sticky" notes color
     UIColor *bananaColor = [ViewController colorWithHexString:@"#FFFC79"];
     
@@ -108,7 +147,6 @@ static NSString *INITIAL_TEXT = @"Line 1\nLine ............... 2\nLine .... 3";
     [_label setText:notes];
     [_label sizeToFit];
 
-    
     // center the label in my view
     CGPoint center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
     [_label setCenter:center];
