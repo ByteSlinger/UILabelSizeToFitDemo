@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,117 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Pfh-Rr-s1H" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Tap anywhere to edit label " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-ya-FSx" userLabel="Tap anywhere to edit label">
+                                <rect key="frame" x="245" y="979" width="278.5" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" UILabel SizeToFit Demo " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U7-AG-Bv0" userLabel="Tap anywhere to edit label">
+                                <rect key="frame" x="123" y="36" width="521" height="57.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1U7-AG-Bv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7u0-xN-0DV"/>
+                            <constraint firstItem="Pfh-Rr-s1H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KAH-Nb-h8Y"/>
+                            <constraint firstAttribute="trailing" secondItem="Pfh-Rr-s1H" secondAttribute="trailing" id="KZm-rz-Gzu"/>
+                            <constraint firstItem="dhN-ya-FSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QFS-ct-8TI"/>
+                            <constraint firstAttribute="bottom" secondItem="Pfh-Rr-s1H" secondAttribute="bottom" id="baW-06-624"/>
+                            <constraint firstItem="Pfh-Rr-s1H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tNQ-VH-9eu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dhN-ya-FSx" secondAttribute="bottom" constant="16" id="zP0-u4-KKA"/>
+                            <constraint firstItem="1U7-AG-Bv0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="zgb-A1-aCr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hOq-O9-WfM" appends="YES" id="C3S-H0-qXR"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="JFk-F5-GI1" kind="presentation" identifier="edit-label" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="zo1-19-SBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hOq-O9-WfM">
+                    <connections>
+                        <action selector="editLabel:" destination="BYZ-38-t0r" id="TYt-fT-Xak"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="5cZ-E5-iRC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="79" y="33"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="L5x-Ej-B9p">
+            <objects>
+                <viewController storyboardIdentifier="edit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JFk-F5-GI1" userLabel="Edit View Controller" customClass="EditViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kd8-O0-Oy8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vn5-7h-YbK" userLabel="Background Image View">
+                                <rect key="frame" x="32" y="32" width="704" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" text="Some Label Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrx-ub-UoP">
+                                <rect key="frame" x="64" y="120" width="640" height="400"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="o5h-ZK-2h0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqa-qM-Ixi">
+                                <rect key="frame" x="353" y="528" width="62" height="61"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonClicked:" destination="JFk-F5-GI1" eventType="touchUpInside" id="w49-0J-0gr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vn5-7h-YbK" firstAttribute="top" secondItem="kd8-O0-Oy8" secondAttribute="top" constant="32" id="2bT-ka-liG"/>
+                            <constraint firstItem="wrx-ub-UoP" firstAttribute="leading" secondItem="bnz-Vj-qIK" secondAttribute="leading" constant="64" id="FiH-15-fau"/>
+                            <constraint firstItem="Kqa-qM-Ixi" firstAttribute="centerX" secondItem="kd8-O0-Oy8" secondAttribute="centerX" id="LfR-Ju-XgV"/>
+                            <constraint firstItem="wrx-ub-UoP" firstAttribute="top" secondItem="bnz-Vj-qIK" secondAttribute="top" constant="100" id="N6o-3f-edC"/>
+                            <constraint firstAttribute="trailing" secondItem="vn5-7h-YbK" secondAttribute="trailing" constant="32" id="NbK-8F-lPV"/>
+                            <constraint firstItem="vn5-7h-YbK" firstAttribute="leading" secondItem="kd8-O0-Oy8" secondAttribute="leading" constant="32" id="VdO-VQ-lD7"/>
+                            <constraint firstItem="Kqa-qM-Ixi" firstAttribute="top" secondItem="wrx-ub-UoP" secondAttribute="bottom" constant="8" id="YDw-eE-8Eh"/>
+                            <constraint firstItem="bnz-Vj-qIK" firstAttribute="trailing" secondItem="wrx-ub-UoP" secondAttribute="trailing" constant="64" id="fXd-dl-0eM"/>
+                            <constraint firstAttribute="bottom" secondItem="vn5-7h-YbK" secondAttribute="bottom" constant="32" id="rTI-ld-uBh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bnz-Vj-qIK"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="wrx-ub-UoP" id="rha-nm-i9p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8x0-pf-6yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="3152" height="2364"/>
+    </resources>
 </document>

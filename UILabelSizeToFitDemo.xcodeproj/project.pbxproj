@@ -14,6 +14,8 @@
 		4CD4F3F621135E7A0058D969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4F3F521135E7A0058D969 /* Assets.xcassets */; };
 		4CD4F3F921135E7A0058D969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4F3F721135E7A0058D969 /* LaunchScreen.storyboard */; };
 		4CD4F3FC21135E7A0058D969 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4F3FB21135E7A0058D969 /* main.m */; };
+		4CD4F404211363630058D969 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4F403211363630058D969 /* EditViewController.m */; };
+		4CD4F4062113747B0058D969 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4F4052113747B0058D969 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		4CD4F3F821135E7A0058D969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD4F3FA21135E7A0058D969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD4F3FB21135E7A0058D969 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CD4F402211363630058D969 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		4CD4F403211363630058D969 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		4CD4F4052113747B0058D969 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +69,14 @@
 				4CD4F3EA21135E790058D969 /* AppDelegate.m */,
 				4CD4F3EC21135E790058D969 /* ViewController.h */,
 				4CD4F3ED21135E790058D969 /* ViewController.m */,
-				4CD4F3EF21135E790058D969 /* Main.storyboard */,
+				4CD4F402211363630058D969 /* EditViewController.h */,
+				4CD4F403211363630058D969 /* EditViewController.m */,
+				4CD4F4052113747B0058D969 /* background.jpg */,
+				4CD4F3FB21135E7A0058D969 /* main.m */,
 				4CD4F3F521135E7A0058D969 /* Assets.xcassets */,
+				4CD4F3EF21135E790058D969 /* Main.storyboard */,
 				4CD4F3F721135E7A0058D969 /* LaunchScreen.storyboard */,
 				4CD4F3FA21135E7A0058D969 /* Info.plist */,
-				4CD4F3FB21135E7A0058D969 /* main.m */,
 				4CD4F3F221135E790058D969 /* UILabelSizeToFitDemo.xcdatamodeld */,
 			);
 			path = UILabelSizeToFitDemo;
@@ -132,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD4F3F921135E7A0058D969 /* LaunchScreen.storyboard in Resources */,
+				4CD4F4062113747B0058D969 /* background.jpg in Resources */,
 				4CD4F3F621135E7A0058D969 /* Assets.xcassets in Resources */,
 				4CD4F3F121135E790058D969 /* Main.storyboard in Resources */,
 			);
@@ -148,6 +157,7 @@
 				4CD4F3EE21135E790058D969 /* ViewController.m in Sources */,
 				4CD4F3FC21135E7A0058D969 /* main.m in Sources */,
 				4CD4F3EB21135E790058D969 /* AppDelegate.m in Sources */,
+				4CD4F404211363630058D969 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
