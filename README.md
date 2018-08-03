@@ -23,7 +23,7 @@ UPDATE:  Here's another way, thanks to @DonMag on SO:
 * Set the label frame to this new text size
 * Call label.sizeToFit
 
-Look at [ViewController.m](UILabelSizeToFitDemo/UILabelSizeToFitDemo/ViewController.m) and the **updateLabel** and **updateLable1** methods for the code.
+Look at [ViewController.m](https://github.com/ByteSlinger/UILabelSizeToFitDemo/blob/master/UILabelSizeToFitDemo/EditViewController.m) and the **updateLabel** and **updateLable1** methods for the code.
 
 Here are some screen shots, and you can see that the labels are resized to fit the longest line in each, as well as fit the height to contain all the lines:
 
